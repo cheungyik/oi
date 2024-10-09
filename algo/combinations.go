@@ -1,34 +1,39 @@
 package algo
 
-// Combinations generates all possible combinations of k elements from a range of n elements (0 to n-1).
-// If k is 0 or greater than n, it returns an empty slice.
+// Combinations generates all possible combinations of k elements from a given slice of any type.
+//
+// This function uses recursion to explore all possible selections of k elements from the input slice `elements`.
+// It supports any type of elements, making it versatile for combinations of strings, numbers, structs, etc.
+//
+// T represents the generic type, allowing the function to handle slices of any data type.
 //
 // Parameters:
-// - n: the size of the range (0 to n-1).
-// - k: the number of elements in each combination.
+//   - elements: A slice of any type T from which combinations will be generated.
+//   - k: The number of elements to include in each combination.
 //
 // Returns:
-// - A 2D slice containing all combinations, where each combination is represented as a slice of integers.
+//   - A slice of slices, where each inner slice represents a combination of k elements.
 //
 // Example:
-// n := [0, 1, 2, 3, 4]
-// k := 3
-// result := Combinations(n, k)
-// Output:
-// [
 //
-//	[0, 1, 2],
-//	[0, 1, 3],
-//	[0, 1, 4],
-//	[0, 2, 3],
-//	[0, 2, 4],
-//	[0, 3, 4],
-//	[1, 2, 3],
-//	[1, 2, 4],
-//	[1, 3, 4],
-//	[2, 3, 4]
+//	// Example 1: Combinations of strings
+//	strings := []string{"apple", "banana", "cherry"}
+//	result := Combinations(strings, 2)
+//	fmt.Println(result)
+//	// Output: [["apple", "banana"], ["apple", "cherry"], ["banana", "cherry"]]
 //
-// ]
+//	// Example 2: Combinations of integers
+//	integers := []int{1, 2, 3, 4}
+//	result := Combinations(integers, 3)
+//	fmt.Println(result)
+//	// Output: [[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]]
+//
+//	// Example 3: Combinations of custom structs
+//	type Point struct { X, Y int }
+//	points := []Point{{1, 2}, {3, 4}, {5, 6}}
+//	result := Combinations(points, 2)
+//	fmt.Println(result)
+//	// Output: [[{1 2} {3 4}], [{1 2} {5 6}], [{3 4} {5 6}]]
 func Combinations[T any](elements []T, k int) [][]T {
 	if k == 0 || k > len(elements) {
 		return [][]T{}
