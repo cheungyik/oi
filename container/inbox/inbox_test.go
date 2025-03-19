@@ -1,9 +1,10 @@
 package inbox_test
 
 import (
-	"doko/container/inbox"
 	"fmt"
 	"testing"
+
+	"oi/container/inbox"
 )
 
 type Processor struct{}

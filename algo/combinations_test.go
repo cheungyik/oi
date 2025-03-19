@@ -1,8 +1,9 @@
 package algo_test
 
 import (
-	"doko/algo"
 	"testing"
+
+	"oi/algo"
 )
 
 func TestCombinations(t *testing.T) {

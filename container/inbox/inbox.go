@@ -1,11 +1,12 @@
 package inbox
 
 import (
-	"doko/container/ring"
 	"errors"
 	"runtime"
 	"sync"
 	"sync/atomic"
+
+	"oi/container/ring"
 )
 
 var ErrInboxStopped = errors.New("inbox stopped")
