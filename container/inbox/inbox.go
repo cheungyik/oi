@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"oi/container/ring"
+	"github.com/cheungyik/oi/container/ring"
 )
 
 var ErrInboxStopped = errors.New("inbox stopped")

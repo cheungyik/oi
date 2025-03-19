@@ -3,7 +3,7 @@ package algo_test
 import (
 	"testing"
 
-	"oi/algo"
+	"github.com/cheungyik/oi/algo"
 )
 
 func TestCombinations(t *testing.T) {

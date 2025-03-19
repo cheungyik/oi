@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"oi/container/inbox"
+	"github.com/cheungyik/oi/container/inbox"
 )
 
 type Processor struct{}

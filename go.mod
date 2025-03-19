@@ -1,3 +1,3 @@
-module oi
+module github.com/cheungyik/oi
 
-go 1.24.0
+go 1.24.1
